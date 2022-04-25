@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexAdandaliGarcia</title>
+</head>
+<body>
+    <h1>Practica numero 4 de JavaScript</h1>
+    <script>   
+    let condicion = 0;
+    while(condicion===0)
+    {
+    let num1 = prompt("Introduce un número");
+    let op = prompt("Ingresa un operador \n ejemplo \n +  , -  ,   /  ,   *  ,  **   o   ^   ,   mod   o   %  ");
+    let num2 = prompt("Ingresa otro número");
+    if(op == ('+') | op==('-') | op == ('/') | op == ('*')| op == ('%')| op == ('**')| op == ('mod')| op == ('^')){
+    if (op == '+') {
+        let sum = parseFloat(num1) + parseFloat(num2);
+        console.log("El resultado de la suma del numero " + num1, "y " + num2, "es: "+ sum);
+    }
+    else if (op == '-') {
+        let res = parseFloat(num1) - parseFloat(num2);
+        console.log("El resultado de la resta del numero " + num1, "y " + num2, " es: "+ res);
+    }
+    else if (op == '/') {
+        let divi = parseFloat(num1) / parseFloat(num2);
+        console.log("El resultado de la division entre el numero " + num1, "y " + num2, " es: "+ divi);
+    }
+    else if (op == '*') {
+        let mul = parseFloat(num1) * parseFloat(num2);
+        console.log("El resultado de la multiplicacion del numero " + num1, "con " + num2, " es: "+ mul);
+    }
+    else if ((op == '**') | (op == ('^'))) {
+        let divi = parseFloat(num1) ** parseFloat(num2);
+        console.log("El resultado de la exponenciacion de " + num1, "al " + num2, " es: "+ divi);
+    }
+    else if ((op == '%') | (op == ('mod'))) {
+        let modu = parseFloat(num1) % parseFloat(num2);
+        console.log("El resultado del modulo de " + num1, "con " + num2, " es: "+ modu);
+    }
+    
+}
+    else{
+        console.warn("Operador invalido");
+    }
+    let pregunta = prompt("¿Desea volver a ejecutar otra operación?\n s/n");
+    if(pregunta=="n"){
+            condicion = 1;
+            break;
+    }
+}
+/*
+1) Programa una función que cuente el número de caracteres de una 
+cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+*/
+
+function contar(cadena = ""){
+        console.log("Practica 1");
+        console.log(`la cadena "${cadena}" tiene ${cadena.length} caracteres`);
+    
+}
+contar("Hola Mundo");
+
+/*
+2) Programa una función que te devuelva el texto recortado según el 
+número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+*/
+function recortado(cadena="", longitud=0){
+        console.log("Practica 2");
+        console.log(`la cadena "${cadena}" con el recorte de caracteres queda: ${cadena.slice(0, longitud)}`);
+    
+}
+recortado("hola mundo",2);
+
+/*
+3) Programa una función que dada una String te devuelva un Array de textos 
+separados por cierto caracter, pe. miFuncion('hola que tal', ' ') 
+devolverá ['hola', 'que', 'tal'].
+*/
+function arreglo(cadena ="", separador = undefined){
+        console.log("Practica 3");
+        console.log(cadena.split(separador));
+}
+
+arreglo("hola que tal", " ")
+
+/*
+4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3)
+devolverá Hola Mundo Hola Mundo Hola Mundo.
+*/
+
+function repetir(cadena = "",veces = undefined){
+        console.log("Practica 4");
+         for (let vez = 1; vez <= veces; vez++) {
+        console.log(`${cadena}, ${vez}`);
+         }
+    
+}
+repetir("hola mundo",3)
+
+</script>
+</body>
+</html>
